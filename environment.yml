@@ -1,0 +1,18 @@
+name: demo
+
+channels:
+  - conda-forge
+
+dependencies:
+  - pip
+  - pip:
+    - ploomber
+    - pandas
+    - scikit-learn
+    - seaborn 
+    - matplotlib.pyplot
+    - xgboost
+    # if using S3...
+    # - boto3
+    # if using Google Cloud Storage...
+    # - google-cloud-storage

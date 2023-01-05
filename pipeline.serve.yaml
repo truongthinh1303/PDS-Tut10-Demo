@@ -1,0 +1,33 @@
+tasks:
+  - source: scripts/new.py
+    name: get
+    product:
+       nb: products/new.ipynb
+       data: products/new.csv
+    
+  - source: scripts/clean.py
+    name: clean
+    product:
+       nb: products/clean_serve.ipynb
+       data: products/clean_serve.csv
+
+  - source: scripts/preprocess.py
+    name: preprocess
+    product:
+       nb: products/preprocess_serve.ipynb
+       data: products/preprocess_serve.csv
+       
+  - source: scripts/feature_eng.py
+    name: feature_eng
+    product:
+       nb: products/feature_eng_serve.ipynb
+       data: products/feature_eng_serve.csv
+
+  - source: scripts/predict.py
+    name: predict
+    product:
+       nb: products/predict.ipynb
+       data: products/preds.csv
+    params:
+       model: '{{root}}\\products\\model.pickle'
+
